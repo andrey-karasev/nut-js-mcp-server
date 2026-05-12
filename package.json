@@ -1,0 +1,29 @@
+{
+  "name": "nut-js-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for desktop automation via @nut-tree-fork/nut-js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --external:@nut-tree-fork/nut-js --external:js-yaml --format=cjs",
+    "start": "node dist/index.js",
+    "dev": "node --loader ts-node/esm src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "desktop-automation",
+    "nut-js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@nut-tree-fork/nut-js": "^4.2.6",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.15.3",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.8.3"
+  }
+}

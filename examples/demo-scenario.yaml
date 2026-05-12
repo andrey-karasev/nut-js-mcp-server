@@ -1,0 +1,39 @@
+name: "Demo Automation Scenario"
+
+config:
+  mouseSpeed: 1000
+  mouseDelay: 100
+  keyboardDelay: 50
+
+steps:
+  - action: move
+    x: 500
+    y: 300
+
+  - action: click
+    button: left
+
+  - action: wait
+    ms: 500
+
+  - action: type
+    text: "Hello from nut-js MCP!"
+
+  - action: hotkey
+    keys: [LeftControl, A]
+
+  - action: screenshot
+    filename: "demo-capture"
+    format: png
+
+  - action: scroll
+    direction: down
+    amount: 3
+
+  - action: repeat
+    count: 3
+    steps:
+      - action: key
+        keys: [Tab]
+      - action: wait
+        ms: 200
