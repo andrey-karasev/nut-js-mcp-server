@@ -5,9 +5,10 @@ MCP server for desktop automation via `@nut-tree-fork/nut-js`. Exposes mouse, ke
 ## Setup
 
 ```bash
-npm install
-npm run build
+npx -y @web4w3/install nut-js
 ```
+
+No cloning or build step needed. The package is pre-compiled and available on npm as [`@web4w3/install`](https://www.npmjs.com/package/@web4w3/install).
 
 ### macOS Permissions
 Grant your terminal **Accessibility** and **Screen Recording** permissions in System Settings > Privacy & Security.
@@ -18,8 +19,8 @@ Grant your terminal **Accessibility** and **Screen Recording** permissions in Sy
 {
   "mcpServers": {
     "nut-js": {
-      "command": "node",
-      "args": ["/path/to/nut-js-mcp-server/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "@web4w3/install", "nut-js"]
     }
   }
 }
